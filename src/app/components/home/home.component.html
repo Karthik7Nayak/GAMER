@@ -1,0 +1,55 @@
+<section id="navbar">
+  <div class="navbar flex-row flex-justify-align">
+
+    <div class="column "><img src="./assets/images/logo.png" alt="cox_logo"></div>
+    <div class="column nav-title"><span>PICK GAME</span></div>
+    <div class="column address"><span>192.186.5.4</span></div>
+  </div>
+  <div class="logged-user-email"><span>abcxyz@cox.net</span></div>
+
+</section>
+<section id="game-slide-section">
+  <div class="game-row">
+
+    <div class="game-list flex-row">
+      <div class="game " *ngFor="let game of gamesData">
+        <img [src]="game.game_logo" >
+        <!--./assets/images/league-of-legends.png-->
+        <div class="game-name"><span class="font-weight-500">{{game.game_name}}</span></div>
+      </div>
+
+    </div>
+    <div class="game-name-key">
+      <div class="list flex-row font-weight-500">
+        <li onclick="cardHeaderClick('Hash')" id="Hash-li">#</li>
+        <li onclick="cardHeaderClick('A')" id="A-li">A</li>
+        <li onclick="cardHeaderClick('B')" id="B-li">B</li>
+        <li onclick="cardHeaderClick('C')" id="C-li">C</li>
+        <li onclick="cardHeaderClick('D')" id="D-li">D</li>
+        <li onclick="cardHeaderClick('E')" id="E-li">E</li>
+        <li onclick="cardHeaderClick('F')" id="F-li">F</li>
+        <li onclick="cardHeaderClick('G')" id="G-li">G</li>
+        <li onclick="cardHeaderClick('H')" id="H-li">H</li>
+        <li onclick="cardHeaderClick('I')" id="I-li">I</li>
+        <li onclick="cardHeaderClick('J')" id="J-li">J</li>
+        <li onclick="cardHeaderClick('K')" id="K-li">K</li>
+        <li onclick="cardHeaderClick('L')" id="L-li">L</li>
+        <li onclick="cardHeaderClick('M')" id="M-li">M</li>
+        <li onclick="cardHeaderClick('N')" id="N-li">N</li>
+        <li onclick="cardHeaderClick('O')" id="O-li">O</li>
+        <li onclick="cardHeaderClick('P')" id="P-li">P</li>
+        <li onclick="cardHeaderClick('Q')" id="Q-li">Q</li>
+        <li onclick="cardHeaderClick('R')" id="R-li">R</li>
+        <li onclick="cardHeaderClick('S')" id="S-li">S</li>
+        <li onclick="cardHeaderClick('T')" id="T-li">T</li>
+        <li onclick="cardHeaderClick('U')" id="U-li">U</li>
+        <li onclick="cardHeaderClick('V')" id="V-li">V</li>
+        <li onclick="cardHeaderClick('W')" id="W-li">W</li>
+        <li onclick="cardHeaderClick('X')" id="X-li">X</li>
+        <li onclick="cardHeaderClick('Y')" id="Y-li">Y</li>
+        <li onclick="cardHeaderClick('Z')" id="Z-li">Z</li>
+      </div>
+
+    </div>
+  </div>
+</section>
