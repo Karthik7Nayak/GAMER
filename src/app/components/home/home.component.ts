@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DefaultGames } from '../../models/gameData';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,11 +9,14 @@ import { DefaultGames } from '../../models/gameData';
 export class HomeComponent implements OnInit {
 
   gamesData;
-  constructor() {
+  constructor(private router: Router) {
     this.gamesData = DefaultGames;
   }
 
   ngOnInit() {
   }
 
+  onGameClick(gameID) {
+    this.router.navigate(['performance'], { queryParams: { gameID: gameID } });
+  }
 }

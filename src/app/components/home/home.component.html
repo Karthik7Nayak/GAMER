@@ -13,7 +13,7 @@
 
     <div class="game-list flex-row">
       <div class="game " *ngFor="let game of gamesData">
-        <img [src]="game.game_logo" >
+        <img [src]="game.game_logo" (click)="onGameClick(game.game_id)">
         <!--./assets/images/league-of-legends.png-->
         <div class="game-name"><span class="font-weight-500">{{game.game_name}}</span></div>
       </div>
@@ -21,33 +21,33 @@
     </div>
     <div class="game-name-key">
       <div class="list flex-row font-weight-500">
-        <li onclick="cardHeaderClick('Hash')" id="Hash-li">#</li>
-        <li onclick="cardHeaderClick('A')" id="A-li">A</li>
-        <li onclick="cardHeaderClick('B')" id="B-li">B</li>
-        <li onclick="cardHeaderClick('C')" id="C-li">C</li>
-        <li onclick="cardHeaderClick('D')" id="D-li">D</li>
-        <li onclick="cardHeaderClick('E')" id="E-li">E</li>
-        <li onclick="cardHeaderClick('F')" id="F-li">F</li>
-        <li onclick="cardHeaderClick('G')" id="G-li">G</li>
-        <li onclick="cardHeaderClick('H')" id="H-li">H</li>
-        <li onclick="cardHeaderClick('I')" id="I-li">I</li>
-        <li onclick="cardHeaderClick('J')" id="J-li">J</li>
-        <li onclick="cardHeaderClick('K')" id="K-li">K</li>
-        <li onclick="cardHeaderClick('L')" id="L-li">L</li>
-        <li onclick="cardHeaderClick('M')" id="M-li">M</li>
-        <li onclick="cardHeaderClick('N')" id="N-li">N</li>
-        <li onclick="cardHeaderClick('O')" id="O-li">O</li>
-        <li onclick="cardHeaderClick('P')" id="P-li">P</li>
-        <li onclick="cardHeaderClick('Q')" id="Q-li">Q</li>
-        <li onclick="cardHeaderClick('R')" id="R-li">R</li>
-        <li onclick="cardHeaderClick('S')" id="S-li">S</li>
-        <li onclick="cardHeaderClick('T')" id="T-li">T</li>
-        <li onclick="cardHeaderClick('U')" id="U-li">U</li>
-        <li onclick="cardHeaderClick('V')" id="V-li">V</li>
-        <li onclick="cardHeaderClick('W')" id="W-li">W</li>
-        <li onclick="cardHeaderClick('X')" id="X-li">X</li>
-        <li onclick="cardHeaderClick('Y')" id="Y-li">Y</li>
-        <li onclick="cardHeaderClick('Z')" id="Z-li">Z</li>
+        <li id="Hash-li">#</li>
+        <li id="A-li">A</li>
+        <li id="B-li">B</li>
+        <li id="C-li">C</li>
+        <li id="D-li">D</li>
+        <li id="E-li">E</li>
+        <li id="F-li">F</li>
+        <li id="G-li">G</li>
+        <li id="H-li">H</li>
+        <li id="I-li">I</li>
+        <li id="J-li">J</li>
+        <li id="K-li">K</li>
+        <li id="L-li">L</li>
+        <li id="M-li">M</li>
+        <li id="N-li">N</li>
+        <li id="O-li">O</li>
+        <li id="P-li">P</li>
+        <li id="Q-li">Q</li>
+        <li id="R-li">R</li>
+        <li id="S-li">S</li>
+        <li id="T-li">T</li>
+        <li id="U-li">U</li>
+        <li id="V-li">V</li>
+        <li id="W-li">W</li>
+        <li id="X-li">X</li>
+        <li id="Y-li">Y</li>
+        <li id="Z-li">Z</li>
       </div>
 
     </div>

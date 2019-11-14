@@ -28,19 +28,39 @@
   <section class="game-details-section">
     <div class="flex-col button-col font-weight-500">
       <div class="button-row flex-row justify-content-space-btwn button-bottom-margin ">
-        <div>DATALOG</div>
+        <div (click)="onButtonClick('DATALOG')">DATALOG</div>
         <div>CONNECTION EXCLUSION</div>
-        <div>TRACE ROUTE</div>
+        <div (click)="onButtonClick('TRACEROUTE')">TRACE ROUTE</div>
 
       </div>
       <div class="button-row flex-row justify-content-space-btwn">
-        <div>STATS</div>
-        <div>DATA GRAPH</div>
-        <div>CHART</div>
+        <div (click)="onButtonClick('STATS')">STATS</div>
+        <div (click)="onButtonClick('DTATAGRAPH')" id="data-graph">DATA GRAPH</div>
+        <div (click)="onButtonClick('CHART')">CHART</div>
       </div>
     </div>
     <div class="game-data">
-      <app-game-statistics></app-game-statistics>
+      <!-- <router-outlet></router-outlet> -->
+      <ng-template [ngIf]="componentModel.showGameStatsComponent">
+        <app-game-statistics></app-game-statistics>
+      </ng-template>
+      <ng-template [ngIf]="componentModel.showDataLogComponent">
+        <app-data-log>
+        </app-data-log>
+      </ng-template>
+      <ng-template [ngIf]="componentModel.showTraceRouteComponent">
+        <app-trace-route>
+        </app-trace-route>
+      </ng-template>
+      <ng-template [ngIf]="componentModel.showdataGraphcomponent">
+        <app-data-graph>
+        </app-data-graph>
+      </ng-template>
+      <ng-template [ngIf]="componentModel.showChartStatsComponent">
+        <app-chart-statistics>
+        </app-chart-statistics>
+      </ng-template>
+
     </div>
   </section>
 </div>
