@@ -1,0 +1,11 @@
+appId: com.electron.coxGamer
+# publish:
+#     provider: "github"
+#     token: ab4ff94348f9595f4d269d27289db498c4b173ce
+#     repo:  GAMER
+#     owner: Karthik7Nayak
+publish:
+    repo:  GAMER
+    owner: Karthik7Nayak
+    provider: github
+    token: "ab4ff94348f9595f4d269d27289db498c4b173ce"

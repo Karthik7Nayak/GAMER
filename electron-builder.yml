@@ -1,0 +1,5 @@
+appId: com.electron.coxGamer
+
+publish:
+  provider: github
+  token: "ab4ff94348f9595f4d269d27289db498c4b173ce"

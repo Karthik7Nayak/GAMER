@@ -1,7 +1,7 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu,ipcMain } = require('electron');
 const path = require('path');
 const url = require('url');
-// const { autoUpdater } = require("electron-updater");
+const { autoUpdater } = require("electron-updater");
 
 
 Menu.setApplicationMenu(null);
@@ -21,17 +21,27 @@ const createWindow = () => {
     protocol: 'file:',
     slashes: true
   }));
-  mainWindow.webContents.openDevTools();
+  console.log(path.join(__dirname, '/src/assets/images/app-icon-win.png'));
+  // mainWindow.setIcon(path.join(__dirname, '/src/assets/images/app-icon-win.png'));
+  // mainWindow.webContents.openDevTools();
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
 
 };
 
+// when the update is ready, notify the BrowserWindow
+autoUpdater.on('update-downloaded', (info) => {
+  win.webContents.send('updateReady')
+});
 
-app.on('ready',
-  createWindow
-);
+app.on('ready', () => {
+  createWindow();
+  autoUpdater.checkForUpdates();
+});
+ipcMain.on("quitAndInstall", (event, arg) => {
+  autoUpdater.quitAndInstall();
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin')
